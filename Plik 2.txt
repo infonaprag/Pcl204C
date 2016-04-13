@@ -1,0 +1,25 @@
+uses crt;
+
+var
+
+  x,y,s:integer;
+
+begin
+
+  clrscr;
+
+  write(‘Podaj x = ‘);
+
+  readln( x );
+
+  write(‘Podaj y = ‘);
+
+  readln( y );
+
+  s := x+y;
+
+  writeln(‘Suma x+y = ’, s );
+
+  readkey;
+
+end.
