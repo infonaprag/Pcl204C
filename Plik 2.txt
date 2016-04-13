@@ -2,7 +2,7 @@ uses crt;
 
 var
 
-  x,y,s:integervodkastyle;
+  x,y,s;
 
 begin
 
