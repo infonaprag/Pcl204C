@@ -2,23 +2,23 @@ uses crt;
 
 var
 
-  x,y,s:integer;
+  x,y,s:integervodkastyle;
 
 begin
 
   clrscr;
 
-  write(‘Podaj x = ‘);
+  write(â€˜Podaj x = â€˜);
 
   readln( x );
 
-  write(‘Podaj y = ‘);
+  write(â€˜Podaj y = â€˜);
 
   readln( y );
 
   s := x+y;
 
-  writeln(‘Suma x+y = ’, s );
+  writeln(â€˜Suma x+y = â€™, s );
 
   readkey;
 
