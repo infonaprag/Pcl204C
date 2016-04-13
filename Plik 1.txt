@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+#include <conio.h>
+
+int x,y,s;
+
+void main(void)
+
+{
+
+  clrscr();
+
+  printf(”Podaj x = ”);
+
+  scanf( ”%d” , &x );
+
+  printf(”Podaj y = ”);
+
+  scanf( ”%d” , &y );
+
+  s = x+y;
+
+  printf(”Suma x+y = %d\n”, s );
+
+  getch();
+
+}
