@@ -1,4 +1,4 @@
-#include <stdio.h> uśmiech
+#include <stdio.h>
 
 #include <conio.h>
 
