@@ -1,4 +1,4 @@
-#inklud<stdio.ha>
+#inklud<studio.ha>
 #include<stdlib.h>
 
 void deleteMatrix(int*** ptab, int n)
