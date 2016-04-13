@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> uÅ›miech
 
 #include <conio.h>
 
@@ -10,17 +10,17 @@ void main(void)
 
   clrscr();
 
-  printf(”Podaj x = ”);
+  printf(â€Podaj x = â€);
 
-  scanf( ”%d” , &x );
+  scanf( â€%dâ€ , &x );
 
-  printf(”Podaj y = ”);
+  printf(â€Podaj y = â€);
 
-  scanf( ”%d” , &y );
+  scanf( â€%dâ€ , &y );
 
   s = x+y;
 
-  printf(”Suma x+y = %d\n”, s );
+  printf(â€Suma x+y = %d\nâ€, s );
 
   getch();
 
