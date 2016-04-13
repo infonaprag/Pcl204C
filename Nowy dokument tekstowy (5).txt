@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <math.h>
+
+struct complex
+{
+ float re;
+ float im;
+};
+
+void wypisz_zesp(struct complex z);
+struct complex dodawanie(struct complex x, struct complex y);
+float modul(struct complex x);
+struct complex sprzezenie(struct complex x);
+
+int main()
+{
+ int dzialanie;
+ struct complex x;
+ struct complex y;
+ printf("Prosze podac pierwsza liczbe zespolona: \n");
+ printf("Re = ");
+ scanf("%f",&x.re);
+ printf("Im = ");
+ scanf("%f",&x.im);
+ printf("\nProsze podac druga liczbe zespolona: \n");
+ printf("Re = ");
+ scanf("%f",&y.re);
+ printf("Im = ");
+ scanf("%f",&y.im);
+ printf("\nWybierz dzialanie: \n1 - dodawanie \n2 - modul \n3 - sprzezenie \n");
+ scanf("%d",&dzialanie);
+ switch(dzialanie)
+ {
+      case 1:
+          wypisz_zesp(dodawanie(x,y));
+          break;
+      case 2:
+          printf("%f\n",modul(x));
+          break;
+      case 3:
+          wypisz_zesp(sprzezenie(x));
+          break;
+      default:
+          printf("Nie wybrano dzialania");
+          break;
+ }
+
+ return 0;
+}
+
+void wypisz_zesp(struct complex z)
+{
+  printf("%.2f %+.2fi \n", z.re, z.im);
+}
+
+struct complex dodawanie(struct complex x, struct complex y)
+{
+ struct complex suma;
+ suma.re = x.re + y.re;
+ suma.im = x.im + y.im;
+ return suma;
+}
+
+float modul(struct complex x),
+{
+ float wynik;
+ wynik = sqrt((x.re)*(x.re)+(x.im)*(x.im));
+ return wynik;
+}
+
+struct complex sprzezenie(struct complex x)
+{
+ struct complex wynik;
+ wynik.re = x.re;
+ wynik.im = (-x.im);
+ return wynik;
+}
