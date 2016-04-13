@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int*dyntab(int dlugosc)
+{
+    int i;
+    int* tab;
+    tab=malloc(dlugosc*sizeof(int));
+    if(tab==NULL)
+        return NULL;
+    for(i=0; i<dlugosc; i++)
+    {
+        tab[i]=2*i+1;
+    }
+    return tab;
+    
+
+}
+
+
+main()
+{
+    int *tablica;
+    int r;
+    int j;
+    printf("Podaj rozmiar tablicy:\n");
+    scanf("%d", &r);
+    if(r<1)
+    {
+        printf("Rozmiar musi byc dodatni!\n");
+    }
+    tablica=dyntab(r);
+    for(j=0; tablica[j]!='\0'; j++)
+    {
+        printf("%d\n", tablica[j]);
+    }
+    
+    
+}
