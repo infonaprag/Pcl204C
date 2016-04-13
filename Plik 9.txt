@@ -1,0 +1,27 @@
+#include<stdio.h>
+#define ROZMIAR 150
+
+char * isElement(char * tab, char znak)
+{
+    int i;
+    for(i=0; tab[i]!='\0'; i++)
+    {
+        if(tab[i]==znak)
+            return &tab[i];
+    }
+    return 0;
+}
+
+main()
+{
+    char *znak;
+    char napis[ROZMIAR];
+    printf("Podaj napis:\n");
+    fgets(napis, ROZMIAR, stdin);
+    printf("Podaj znak do znalezenia\n");
+    znak=isElement(napis, 'o');
+    if(znak==0)
+        printf("Nie znaleziono znaku w napisie\n");
+    else
+        printf("Znaleziono znak: %c\n", *znak);
+}

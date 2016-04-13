@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define ROZMIAR 10
+
+int deleteLastChar(char** pstr)
+{
+    int i, j;
+    int dlugosc=0;
+    for(i=0; (*pstr)='\0'; i++)
+    {
+        dlugosc++;
+    }
+    char *newTab=malloc(dlugosc*sizeof(char));
+    if(newTab!=NULL)
+    {
+        for(j=0; (*pstr)[j]!='\0'; j++)
+        {
+            newTab[j]=(*pstr)[j];
+        }
+        newTab[dlugosc-1]='\0';
+        free(*pstr);
+        *pstr=newTab;
+        return dlugosc-1;
+    }
+    return -1;
+}
+
+
+
+main()
+{
+    int* tablica;
+    tablica=malloc(ROZMIAR*sizaof(char));
+    printf("Podaj napis:\n);
+    fgets(tablica, ROZMIAR, stdin);
+        
+    
+}

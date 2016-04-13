@@ -1,0 +1,37 @@
+#include<stdio.h>
+#define DLUGOSC 150
+
+int palindrom(char* tekst, int rozmiar)
+{
+    int z;
+    if(rozmiar==1 || rozmiar==0)
+        return 1;
+    else if(tekst[0]==tekst[rozmiar-1])
+        return palindrom(tekst+1, rozmiar-2);
+    else
+        return 0;
+}
+
+
+main()
+{
+    int i, dlu=0, wartosc;
+    char napis[DLUGOSC];
+    fgets(napis, DLUGOSC, stdin);
+    for(i=0; napis[i]!='\n'; i++)
+    {
+        dlu++;
+    }
+
+    if(dlu==0)
+    {
+        printf("Blad");
+        return 0;
+    }    
+    wartosc=palindrom(napis, dlu);
+    if(wartosc==1)
+        printf("Podany napis jest palindromem.\n");
+    else
+        printf("Podany napis nie jest palindromem.\n");
+}
+ 

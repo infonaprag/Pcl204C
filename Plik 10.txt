@@ -1,0 +1,35 @@
+#include<stdio.h>
+#define ROZMIAR 150
+
+int isEqual(char* str1, char* str2)
+{
+  int i;
+  int wartoscfunkcji;
+  for(i=0; str1[i]!='\0' || str2[i]!='\0' ; i++)
+     {
+      if(str1[i]==str2[i])
+          wartoscfunkcji=1;
+      else
+          wartoscfunkcji=0;
+      }
+return wartoscfunkcji;
+}
+
+ 
+
+int main()
+{
+  int a;
+  char tab1[ROZMIAR];
+  char tab2[ROZMIAR];
+  printf("Podaj pierwszy napis:\n");
+  fgets(tab1, ROZMIAR, stdin);
+  printf("Podaj drugi napis:\n");
+  fgets(tab2, ROZMIAR, stdin);
+  a=isEqual(tab1, tab2);
+  if(a==1)
+       printf("Napisy sa identyczne.\n");
+  else
+       printf("Napisy nie sa identyczne.\n");
+  return 0;
+}
